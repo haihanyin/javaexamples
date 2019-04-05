@@ -1,0 +1,13 @@
+linkedlist is not multithread safe, in what situation it will fail?
+
+dequeue on linkedlist
+
+in map, keyset and valueset is not a view but backed by real stuff, changes to these sets will change the map
+
+hashmap allows null key but treemap doesn't
+hashmap is array backed
+when hashmap is getting too large, it will be transformed to be backed by a tree, similar to treemap
+linkedhashmap perserves the insert order, (can be configured as insert order), can automatically remove elements based on fixed size
+iterations on linkedhashmap will skip empty buckets
+
+iterate hashmap will cover the capacity, linkedhashmap does not have this problem
