@@ -11,3 +11,20 @@ linkedhashmap perserves the insert order, (can be configured as insert order), c
 iterations on linkedhashmap will skip empty buckets
 
 iterate hashmap will cover the capacity, linkedhashmap does not have this problem
+
+concurrenthashmap use segements in hashtable, different thread accessing different
+segments won't block each other.
+aggregate operation like size(), isEmpty() may be unexpected in multithreading for concurrenthashmap
+iterators on concurrenthashmap will never throw concurrentmodificationexception
+
+if order is required, use concurrentskiplistmap
+
+hashtable vs hashmap
+hashtable is synchronized, hashmap isn't
+hashtable does not allow null key and value, hashmap allows
+
+enummap has performance improvements
+
+SynchronousQueue has only take() and put(), they are blocking operations
+for example, if take() is called on an empty queue, it is blocked until other
+threads put an element on the queue
