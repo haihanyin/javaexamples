@@ -17,7 +17,7 @@ segments won't block each other.
 aggregate operation like size(), isEmpty() may be unexpected in multithreading for concurrenthashmap
 iterators on concurrenthashmap will never throw concurrentmodificationexception
 
-if order is required, use concurrentskiplistmap
+if order(sorted) is required, use concurrentskiplistmap
 
 hashtable vs hashmap
 hashtable is synchronized, hashmap isn't
@@ -28,3 +28,11 @@ enummap has performance improvements
 SynchronousQueue has only take() and put(), they are blocking operations
 for example, if take() is called on an empty queue, it is blocked until other
 threads put an element on the queue
+
+transferqueue, producer is blocked until the produced element is consumed.
+synchronousqueue is a blocking queue, but the produce is not blocked (if not null) after producing an element.
+
+"for each" uses iterator
+
+differences stream.foreach and foreach
+- stream.foreach access collections without order, in sequential stream, it does not occur
