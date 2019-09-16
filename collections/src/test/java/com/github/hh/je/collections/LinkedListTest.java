@@ -2,7 +2,10 @@ package com.github.hh.je.collections;
 
 import org.junit.Test;
 
-import java.util.*;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.UUID;
 import java.util.stream.IntStream;
 
 public class LinkedListTest {
