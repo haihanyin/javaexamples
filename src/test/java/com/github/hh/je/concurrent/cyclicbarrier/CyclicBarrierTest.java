@@ -28,7 +28,7 @@ public class CyclicBarrierTest {
                 }
             });
         }
-        cyclicBarrier.
-        System.out.println("Work is done");
+//        cyclicBarrier.
+//        System.out.println("Work is done");
     }
 }
